@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2_pie", "..\Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp_nta", "..\ConsoleApp1\ConsoleApp_nta.csproj", "{30C8011A-A702-4C95-AF59-A9DA19DE57A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp_AreaOfaCircle", "..\ConsoleApp_AreaOfaCircle\ConsoleApp_AreaOfaCircle.csproj", "{3178EAB5-14CB-4612-B6CB-5ACC357C1A5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{30C8011A-A702-4C95-AF59-A9DA19DE57A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30C8011A-A702-4C95-AF59-A9DA19DE57A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30C8011A-A702-4C95-AF59-A9DA19DE57A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3178EAB5-14CB-4612-B6CB-5ACC357C1A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3178EAB5-14CB-4612-B6CB-5ACC357C1A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3178EAB5-14CB-4612-B6CB-5ACC357C1A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3178EAB5-14CB-4612-B6CB-5ACC357C1A5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
