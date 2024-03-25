@@ -24,16 +24,16 @@
 //switch (arithmOper)
 //{
 //    case "+":
-//        Console.WriteLine($"operand1 + operand2 = {operand1+operand2}");
+//        Console.WriteLine($"operand1 + operand2 = {operand1 + operand2}");
 //        break;
-//    case "-": 
-//        Console.WriteLine($"operand1 - operand2 = {operand1-operand2}");
+//    case "-":
+//        Console.WriteLine($"operand1 - operand2 = {operand1 - operand2}");
 //        break;
 //    case "*":
-//        Console.WriteLine($"operand1 * operand2 = {operand1*operand2}");
+//        Console.WriteLine($"operand1 * operand2 = {operand1 * operand2}");
 //        break;
 //    case "/":
-//        if (operand2!=0)
+//        if (operand2 != 0)
 //        {
 //            Console.WriteLine($"operand1 / operand2 = {operand1 / operand2}");
 //        }
@@ -42,6 +42,11 @@
 //            Console.WriteLine("Can't be devided by 0");
 //        }
 //        break;
+//    default:
+//        {
+//            Console.WriteLine("Can't perform the calculation");
+//            break;
+//        }
 //}
 
 
@@ -126,14 +131,27 @@
 
 
 //Task 4
-Console.WriteLine("Type some number:");
-int number = int.Parse(Console.ReadLine());
+//Console.WriteLine("Type some number:");
+//int number = int.Parse(Console.ReadLine());
 
-if (number % 2 == 0)
-{
-    Console.WriteLine("Even");
-}
-else
-{
-    Console.WriteLine("Odd");
-}
+//if (number % 2 == 0)
+//{
+//    Console.WriteLine("Even");
+//}
+//else
+//{
+//    Console.WriteLine("Odd");
+//}
+
+////Task 4.1 - aöternative way
+//Console.WriteLine("Type some number:");
+//int number = int.Parse(Console.ReadLine());
+
+//if ((number / 2) * 2 == number)
+//{
+//    Console.WriteLine("Even");
+//}
+//else
+//{
+//    Console.WriteLine("Odd");
+//}
