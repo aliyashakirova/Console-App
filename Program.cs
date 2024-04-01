@@ -1,4 +1,4 @@
-﻿//// Homework
+//// Homework
 
 //Console.WriteLine("Enter username:");
 //string username = Console.ReadLine();
@@ -155,6 +155,7 @@
 //{
 //    Console.WriteLine("Odd");
 //}
+
 //for (int i = 0; i < 10; i++)
 //{
 //    Console.WriteLine(i);
@@ -299,6 +300,7 @@
 //    {
 //        Console.WriteLine($"The number is found in the array, the element N is {i+1}");
 //        b++;
+//        break;
 //    }
 //}
 //if (b == 0)
@@ -478,19 +480,19 @@
 //    Console.WriteLine(arr[i]);
 //}
 ////Task 8
-//int[,] arr1 = {{1,0,0,0},{0,1,0,0},{0,0,0,0}};
-//int[,] arr2 = { { 1,2,3}, { 1,1,1}, {0,0,0},{2,1,0} };
-//int[,] arrMultip = new int[3,3];
+//int[,] arr1 = { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
+//int[,] arr2 = { { 1, 2, 3 }, { 1, 1, 1 }, { 0, 0, 0 }, { 2, 1, 0 } };
+//int[,] arrMultip = new int[arr1.GetLength(0), arr2.GetLength(1)];
 
-//for (int i = 0; i < 3; i++)
+//for (int i = 0; i < arrMultip.GetLength(0); i++)
 //{
-//    for (int j = 0; j < 3; j++)
+//    for (int j = 0; j < arrMultip.GetLength(1); j++)
 //    {
 //        int sum = 0;
-//        for (int k = 0; k < 4; k++)
-//        { 
-//        arrMultip[i,j] = arr1[i, k] * arr2[k,j] + sum;
-//        sum = arrMultip[i,j];
+//        for (int k = 0; k < arr1.GetLength(0); k++)
+//        {
+//            arrMultip[i, j] = arr1[i, k] * arr2[k, j] + sum;
+//            sum = arrMultip[i, j];
 //        }
 //        Console.Write($"{arrMultip[i, j]} ");
 //    }
@@ -500,13 +502,13 @@
 ////Task 9 
 //int[,] arr1 = { { 1, 0, 0 }, { -7, 1, 6 }, { -4, 2, 5 } };
 //int[,] arr2 = { { 1, 2, 3 }, { 1, 1, 1 }, { 2, -3, 1 } };
-//int[,] arrSum = new int[3, 3];
+//int[,] arrSum = new int[arr1.GetLength(0), arr2.GetLength(1)];
 
-//for (int i = 0; i < 3; i++)
+//for (int i = 0; i < arrSum.GetLength(0); i++)
 //{
-//    for (int j = 0; j < 3; j++)
+//    for (int j = 0; j < arrSum.GetLength(1); j++)
 //    {
-//        arrSum[i, j] = arr1[i, j]+ arr2[i,j];
+//        arrSum[i, j] = arr1[i, j] + arr2[i, j];
 //        Console.Write($"{arrSum[i, j]} ");
 //    }
 //    Console.WriteLine();
@@ -548,3 +550,4 @@
 //    }
 //    Console.WriteLine();
 //}
+
