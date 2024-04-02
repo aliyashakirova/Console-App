@@ -551,3 +551,138 @@
 //    Console.WriteLine();
 //}
 
+// Lesson 5
+//// Task 1
+//using System.Text;
+
+//string str = "12312dfgsfj234234hdfhjtestefdhfghfthvghftesthdffgh456456df  hygfd0000";
+
+//string str2 = str.Replace("test", "testing");
+//int l = str2.Length;
+//char[] chr = str2.ToCharArray();
+//StringBuilder str3 = new StringBuilder("");
+//for (int i = 0; i < l; i++)
+//{
+//    if (!char.IsDigit(chr[i]))
+//    {
+//        str3 = str3.Append(chr[i]); 
+//    }
+//}
+//Console.Write(str3);
+
+////Task 2
+
+//string str1 = "Welcome";
+//string str2 = "to";
+//string str3 = "the";
+//string str4 = "TMS";
+//string str5 = "lessons";
+
+//string phraseFormat = "{0} {1} {2} {3} {4}.";
+
+//Console.WriteLine(string.Format(phraseFormat,str1,str2,str3,str4,str5));
+
+//Task 3
+//string str = "teamwithsomeofexcersiceabcwanttomakeitbetter";
+
+//string[] strarr = str.Split("abc");
+//int l= strarr.Length;
+//for (int i = 0; i < l; i++)
+//{
+//    Console.WriteLine(strarr[i]);
+//}
+////Task 4
+//string str = "Bad day";
+//string substr = "Good";
+
+//str = str.Substring(3);
+//str = str.Insert(0, substr);
+//str = str.Insert(str.Length,"!!!!!");
+//str = str.Remove(str.Length - 1);
+//str = string.Concat(str, "?");
+//Console.WriteLine(str);
+////Task 5
+
+
+/////
+//string docNum = "5558-aBc-0386-LMq-1a2b";
+
+//string[] strs = OnlyNumberParts(docNum);
+
+//HideOnlyLetterParts(docNum);
+
+//string docNumOnlyLetters = DocNumOnlyLettersLowerCase(strs);
+
+//DocNumOnlyLettersUpperCase(docNumOnlyLetters);
+
+//DocNumContainsSubstr(docNum, "abc");
+
+//DocNumStartWith(docNum, "555");
+
+//DocNumEndsWith(docNum, "1a2b");
+
+//static void DocNumStartWith(string docNum, string substr)
+//{
+//    if (docNum.StartsWith(substr))
+//        Console.WriteLine($"The document number starts with '{substr}'");
+//    else Console.WriteLine($"The document number does not start with '{substr}'");
+//}
+
+//static void DocNumContainsSubstr(string docNum, string substr)
+//{
+//    if (docNum.Contains(substr, StringComparison.OrdinalIgnoreCase))
+//        Console.WriteLine($"The document number contains the substring '{substr}'");
+//    else
+//        Console.WriteLine($"The document number does not contain the substring '{substr}'");
+//}
+
+//static string DocNumOnlyLettersLowerCase(string[] strs)
+//{
+//    int l = strs[4].Length;
+//    char[] chr = strs[4].ToCharArray();
+//    string str4 = "";
+//    for (int i = 0; i < l; i++)
+//    {
+//        if (!char.IsDigit(chr[i]))
+//        {
+//            str4 = string.Concat(str4, chr[i]);
+
+//        }
+//        else
+//        {
+//            str4 = string.Concat(str4, '/');
+//        }
+//    }
+//    string phraseFormat = "{0}/{1}{2}";
+//    string docNumOnlyLetters = string.Format(phraseFormat, strs[1], strs[3], str4).ToLower();
+//    Console.WriteLine(docNumOnlyLetters);
+//    return docNumOnlyLetters;
+//}
+
+//static void DocNumOnlyLettersUpperCase(string docNumOnlyLetters)
+//{
+//    StringBuilder strBldr = new StringBuilder("Letters:");
+//    strBldr.Append(docNumOnlyLetters.ToUpper());
+//    Console.WriteLine(strBldr);
+//}
+
+//static void HideOnlyLetterParts(string docNum)
+//{
+//    string docNumA = docNum.Replace("jSg", "***");
+//    docNumA = docNumA.Replace("LMq", "***");
+//    Console.WriteLine(docNumA);
+//}
+
+//static string[] OnlyNumberParts(string docNum)
+//{
+//    string[] strs = docNum.Split("-");
+//    Console.WriteLine(string.Concat(strs[0], strs[2]));
+//    return strs;
+//}
+
+//static void DocNumEndsWith(string docNum, string substr)
+//{
+//    if (docNum.EndsWith(substr))
+//        Console.WriteLine($"The document number ends with '{substr}'");
+//    else Console.WriteLine($"The document number does not end with '{substr}'");
+//}
