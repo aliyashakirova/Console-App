@@ -84,7 +84,6 @@
 //    }
 
 ////Task 3
-///
 
 //using System.Text;
 //Console.OutputEncoding = Encoding.Unicode;
@@ -686,3 +685,131 @@
 //        Console.WriteLine($"The document number ends with '{substr}'");
 //    else Console.WriteLine($"The document number does not end with '{substr}'");
 //}
+
+//Lesson 6: 
+//Task 1 (Students with scores)
+//using Console_App;
+
+
+
+//Student[] students = new Student[14];
+
+//for (int i = 0; i < students.Length; i++)
+//{
+//    //here you call the constructor
+//    students[i] = new Student(i.ToString(), Random.Shared.Next(0, 11));
+//}
+
+//foreach (Student student in students)
+//{
+//    //if (student.Score > 8)
+//    {
+//        student.Print();
+//    }
+//}
+
+
+////Task2 (hungry cat)
+/////using Console_App;
+//Cat cat = new Cat()
+//{
+//    Name = "Vasily",
+//    Age = 3
+//};
+
+
+
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+
+////Hw Lesson 6
+////Task 1 - Phone
+//using Console_App;
+//using System.Numerics;
+//// Phone phone = new Phone(5,".lmfdgöldf", 5.4);
+
+//Phone[] phones = new Phone[10];
+
+//for (int i = 0; i < phones.Length; i++)
+//{
+//    phones[i] = new Phone(Random.Shared.Next(100000000, 2100000000), $"model{i}", Random.Shared.NextDouble());
+//    phones[i].SendMessage(phones[i].Number);
+//}
+
+
+
+//string[] names = { "Sasha", "Masha", "Dasha", "Pasha", "Misha", "Petya", "Vanya", "Kolya", "Dima", "Oleg" };
+//int j = 0;
+//foreach (Phone phone in phones)
+//{
+//    phone.Print();
+
+
+//    Console.WriteLine(phone.Number);
+//    phone.ReceiveCall(names[j], Random.Shared.Next(100000000, 2100000000));
+//    j++;
+
+
+//    int number = phone.GetNumber();
+//    Console.WriteLine(number);
+
+
+//}
+
+
+
+// Task 2 - CreditCard
+
+//using Console_App;
+
+//CreditCard creditCard = new CreditCard()
+//{
+//    AccNumber = 4088103453451234,
+//    RemainingBalance = 200.00
+//};
+
+//var remBalance = creditCard.RemainingBalance;
+//var balance = (float)creditCard.LoadMoney(remBalance, money);
+
+//creditCard.LoadMoney(creditCard, 10.50);
+//creditCard.LoadMoney(creditCard, 20.00);
+//Console.WriteLine(creditCard.GetCurrentBalance(creditCard));
+
+//creditCard.WithdrawMoney(creditCard, 10.50);
+//creditCard.WithdrawMoney(creditCard, 20.00);
+//Console.WriteLine(creditCard.GetCurrentBalance(creditCard));
+
+
+//var currBalance = creditCard.GetCurrentBalance(creditCard);
+//Console.WriteLine($"The current balance is {currBalance}");
+
+
+//CreditCard creditCard1 = new CreditCard()
+//{
+//    AccNumber = 4088103453451234,
+//    RemainingBalance = 100.00
+//};
+//CreditCard creditCard2 = new CreditCard()
+//{
+//    AccNumber = 40892345465445,
+//    RemainingBalance = 200.00
+//};
+//CreditCard creditCard3 = new CreditCard()
+//{
+//    AccNumber = 408254631236789,
+//    RemainingBalance = 300.00
+//};
+
+
+//creditCard1.LoadMoney(creditCard1, 10.00);
+//Console.WriteLine(creditCard1.GetCurrentBalance(creditCard1));
+
+//creditCard2.LoadMoney(creditCard2, 20.00);
+//Console.WriteLine(creditCard2.GetCurrentBalance(creditCard2));
+
+//creditCard3.WithdrawMoney(creditCard3, 30.00);
+//Console.WriteLine(creditCard3.GetCurrentBalance(creditCard3));
