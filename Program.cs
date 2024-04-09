@@ -84,7 +84,6 @@
 //    }
 
 ////Task 3
-///
 
 //using System.Text;
 //Console.OutputEncoding = Encoding.Unicode;
@@ -551,3 +550,274 @@
 //    Console.WriteLine();
 //}
 
+// Lesson 5
+//// Task 1
+//using System.Text;
+
+//string str = "12312dfgsfj234234hdfhjtestefdhfghfthvghftesthdffgh456456df  hygfd0000";
+
+//string str2 = str.Replace("test", "testing");
+//int l = str2.Length;
+//char[] chr = str2.ToCharArray();
+//StringBuilder str3 = new StringBuilder("");
+//for (int i = 0; i < l; i++)
+//{
+//    if (!char.IsDigit(chr[i]))
+//    {
+//        str3 = str3.Append(chr[i]); 
+//    }
+//}
+//Console.Write(str3);
+
+////Task 2
+
+//string str1 = "Welcome";
+//string str2 = "to";
+//string str3 = "the";
+//string str4 = "TMS";
+//string str5 = "lessons";
+
+//string phraseFormat = "{0} {1} {2} {3} {4}.";
+
+//Console.WriteLine(string.Format(phraseFormat,str1,str2,str3,str4,str5));
+
+//Task 3
+//string str = "teamwithsomeofexcersiceabcwanttomakeitbetter";
+
+//string[] strarr = str.Split("abc");
+//int l= strarr.Length;
+//for (int i = 0; i < l; i++)
+//{
+//    Console.WriteLine(strarr[i]);
+//}
+////Task 4
+//string str = "Bad day";
+//string substr = "Good";
+
+//str = str.Substring(3);
+//str = str.Insert(0, substr);
+//str = str.Insert(str.Length,"!!!!!");
+//str = str.Remove(str.Length - 1);
+//str = string.Concat(str, "?");
+//Console.WriteLine(str);
+////Task 5
+
+
+/////
+//string docNum = "5558-aBc-0386-LMq-1a2b";
+
+//string[] strs = OnlyNumberParts(docNum);
+
+//HideOnlyLetterParts(docNum);
+
+//string docNumOnlyLetters = DocNumOnlyLettersLowerCase(strs);
+
+//DocNumOnlyLettersUpperCase(docNumOnlyLetters);
+
+//DocNumContainsSubstr(docNum, "abc");
+
+//DocNumStartWith(docNum, "555");
+
+//DocNumEndsWith(docNum, "1a2b");
+
+//static void DocNumStartWith(string docNum, string substr)
+//{
+//    if (docNum.StartsWith(substr))
+//        Console.WriteLine($"The document number starts with '{substr}'");
+//    else Console.WriteLine($"The document number does not start with '{substr}'");
+//}
+
+//static void DocNumContainsSubstr(string docNum, string substr)
+//{
+//    if (docNum.Contains(substr, StringComparison.OrdinalIgnoreCase))
+//        Console.WriteLine($"The document number contains the substring '{substr}'");
+//    else
+//        Console.WriteLine($"The document number does not contain the substring '{substr}'");
+//}
+
+//static string DocNumOnlyLettersLowerCase(string[] strs)
+//{
+//    int l = strs[4].Length;
+//    char[] chr = strs[4].ToCharArray();
+//    string str4 = "";
+//    for (int i = 0; i < l; i++)
+//    {
+//        if (char.IsLetter(chr[i]))
+//        {
+//            str4 = string.Concat(str4, chr[i]);
+
+//        }
+//        else
+//        {
+//            str4 = string.Concat(str4, '/');
+//        }
+//    }
+//    string phraseFormat = "{0}/{1}{2}";
+//    string docNumOnlyLetters = string.Format(phraseFormat, strs[1], strs[3], str4).ToLower();
+//    Console.WriteLine(docNumOnlyLetters);
+//    return docNumOnlyLetters;
+//}
+
+//static void DocNumOnlyLettersUpperCase(string docNumOnlyLetters)
+//{
+//    StringBuilder strBldr = new StringBuilder("Letters:");
+//    strBldr.Append(docNumOnlyLetters.ToUpper());
+//    Console.WriteLine(strBldr);
+//}
+
+//static void HideOnlyLetterParts(string docNum)
+//{
+
+//    char[] chr = docNum.ToArray();
+//    for (int i = 0; i < chr.Length; i++)
+//    {
+//        if (char.IsLetter(chr[i]))
+//        {
+//            if (!char.IsDigit(chr[i-1]))
+//            { chr[i] = '*'; }
+//        }
+//        Console.Write(chr[i].ToString());
+//    }
+
+
+//}
+
+//static string[] OnlyNumberParts(string docNum)
+//{
+//    string[] strs = docNum.Split("-");
+//    Console.WriteLine(string.Concat(strs[0], strs[2]));
+//    return strs;
+//}
+
+//static void DocNumEndsWith(string docNum, string substr)
+//{
+//    if (docNum.EndsWith(substr))
+//        Console.WriteLine($"The document number ends with '{substr}'");
+//    else Console.WriteLine($"The document number does not end with '{substr}'");
+//}
+
+//Lesson 6: 
+//Task 1 (Students with scores)
+//using Console_App;
+
+
+
+//Student[] students = new Student[14];
+
+//for (int i = 0; i < students.Length; i++)
+//{
+//    //here you call the constructor
+//    students[i] = new Student(i.ToString(), Random.Shared.Next(0, 11));
+//}
+
+//foreach (Student student in students)
+//{
+//    //if (student.Score > 8)
+//    {
+//        student.Print();
+//    }
+//}
+
+
+////Task2 (hungry cat)
+/////using Console_App;
+//Cat cat = new Cat()
+//{
+//    Name = "Vasily",
+//    Age = 3
+//};
+
+
+
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+//Console.WriteLine(cat.Feed(10));
+
+////Hw Lesson 6
+////Task 1 - Phone
+//using Console_App;
+//using System.Numerics;
+//// Phone phone = new Phone(5,".lmfdgöldf", 5.4);
+
+//Phone[] phones = new Phone[10];
+
+//for (int i = 0; i < phones.Length; i++)
+//{
+//    phones[i] = new Phone(Random.Shared.Next(100000000, 2100000000), $"model{i}", Random.Shared.NextDouble());
+//    phones[i].SendMessage(phones[i].Number);
+//}
+
+
+
+//string[] names = { "Sasha", "Masha", "Dasha", "Pasha", "Misha", "Petya", "Vanya", "Kolya", "Dima", "Oleg" };
+//int j = 0;
+//foreach (Phone phone in phones)
+//{
+//    phone.Print();
+
+
+//    Console.WriteLine(phone.Number);
+//    phone.ReceiveCall(names[j], Random.Shared.Next(100000000, 2100000000));
+//    j++;
+
+
+//    int number = phone.GetNumber();
+//    Console.WriteLine(number);
+
+
+//}
+
+
+
+// Task 2 - CreditCard
+
+//using Console_App;
+
+//CreditCard creditCard = new CreditCard();
+//creditCard.AccNumber = 4088101232458731;
+//creditCard.RemainingBalance = 100.00;
+
+
+//creditCard.LoadMoney(creditCard, 10.50);
+//creditCard.LoadMoney(creditCard, 20.00);
+//Console.WriteLine(creditCard.GetCurrentBalance(creditCard));
+
+//creditCard.WithdrawMoney(creditCard, 10.50);
+//creditCard.WithdrawMoney(creditCard, 20.00);
+//Console.WriteLine(creditCard.GetCurrentBalance(creditCard));
+
+
+//var currBalance = creditCard.GetCurrentBalance(creditCard);
+//Console.WriteLine($"The current balance is {currBalance}");
+
+
+//CreditCard creditCard1 = new CreditCard();
+
+//creditCard1.AccNumber = 4088103453451234;
+//creditCard1.RemainingBalance = 100.00;
+
+
+//CreditCard creditCard2 = new CreditCard();
+
+//creditCard2.AccNumber = 40892345465445;
+//creditCard2.RemainingBalance = 200.00;
+
+
+//CreditCard creditCard3 = new CreditCard();
+
+//creditCard3.AccNumber = 408254631236789;
+//creditCard3.RemainingBalance = 300.00;
+
+
+
+//creditCard1.LoadMoney(creditCard1, 10.00);
+//Console.WriteLine(creditCard1.GetCurrentBalance(creditCard1));
+
+//creditCard2.LoadMoney(creditCard2, 20.00);
+//Console.WriteLine(creditCard2.GetCurrentBalance(creditCard2));
+
+//creditCard3.WithdrawMoney(creditCard3, 30.00);
+//Console.WriteLine(creditCard3.GetCurrentBalance(creditCard3));
