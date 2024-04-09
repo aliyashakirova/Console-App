@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,52 +11,75 @@ namespace Console_App
 {
     internal class Phone
     {
-        public int Number { get; set; }
-        public string Model { get; set; }
-        public double Weight { get; set; }
+        //public int Number { get; set; }
+        //public string Model { get; set; }
+        //public double Weight { get; set; }
 
+
+        private int _number;
+        private string _model;
+        private double _weight;
+
+
+        public int Number
+        { 
+            get { return _number; } 
+            set { _number = value; }
+        }
+
+        public string Model
+        {
+            get { return _model; }
+            set { _model = value; }
+        }
+
+        public double Weight
+        {
+            get { return _weight; }
+            set { _weight = value; }
+        }
         public void Print()
         {
-            Console.WriteLine(($"{Number} - number, {Model} - model, {Weight} - weight"));
+            Console.WriteLine(($"{this._number} - number, {this._model} - model, {this._weight} - weight"));
         }
 
-        public Phone (int number, string model, double weight)
+        public Phone (int _number, string _model, double _weight)
         {
-            Number = number;
-            Model = model;
-            Weight = weight;
-            var phone = new Phone(Number,Model);
+            Number = _number;
+            Model = _model;
+            Weight = _weight;
+            var phone = new Phone(this._number,this._model);
         }
 
-        public Phone(int number, string model)
+        public Phone(int _number, string _model)
         {
-            Number = number;
-            Model = model;
+            Number = _number;
+            Model = _model;
         }
 
         public Phone()
         {
         }
 
-        public void ReceiveCall(string name)
+        public void ReceiveCall(string _name)
         {
-            Console.WriteLine($"{name} is calling you");
+            Console.WriteLine($"{_name} is calling you");
         }
 
-        public void ReceiveCall(string name, int number)
+        public void ReceiveCall(string _name, int _number)
         {
-            Console.WriteLine($"{name} {number} is calling you");
+            Console.WriteLine($"{_name} {this._number} is calling you");
         }
 
         public int GetNumber()
         {
-            return Number;
+            return _number;
         }
 
-        public void SendMessage(int number)
+        public void SendMessage(int _number)
         {
 
-                Console.WriteLine($"Message is sent to: {number}");
+                Console.WriteLine($"Message is sent to: {this._number}");
 
         }
 
