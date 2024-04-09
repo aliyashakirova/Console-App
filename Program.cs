@@ -642,7 +642,7 @@
 //    string str4 = "";
 //    for (int i = 0; i < l; i++)
 //    {
-//        if (!char.IsDigit(chr[i]))
+//        if (char.IsLetter(chr[i]))
 //        {
 //            str4 = string.Concat(str4, chr[i]);
 
@@ -667,9 +667,19 @@
 
 //static void HideOnlyLetterParts(string docNum)
 //{
-//    string docNumA = docNum.Replace("jSg", "***");
-//    docNumA = docNumA.Replace("LMq", "***");
-//    Console.WriteLine(docNumA);
+
+//    char[] chr = docNum.ToArray();
+//    for (int i = 0; i < chr.Length; i++)
+//    {
+//        if (char.IsLetter(chr[i]))
+//        {
+//            if (!char.IsDigit(chr[i-1]))
+//            { chr[i] = '*'; }
+//        }
+//        Console.Write(chr[i].ToString());
+//    }
+
+
 //}
 
 //static string[] OnlyNumberParts(string docNum)
@@ -766,14 +776,10 @@
 
 //using Console_App;
 
-//CreditCard creditCard = new CreditCard()
-//{
-//    AccNumber = 4088103453451234,
-//    RemainingBalance = 200.00
-//};
+//CreditCard creditCard = new CreditCard();
+//creditCard.AccNumber = 4088101232458731;
+//creditCard.RemainingBalance = 100.00;
 
-//var remBalance = creditCard.RemainingBalance;
-//var balance = (float)creditCard.LoadMoney(remBalance, money);
 
 //creditCard.LoadMoney(creditCard, 10.50);
 //creditCard.LoadMoney(creditCard, 20.00);
@@ -788,21 +794,23 @@
 //Console.WriteLine($"The current balance is {currBalance}");
 
 
-//CreditCard creditCard1 = new CreditCard()
-//{
-//    AccNumber = 4088103453451234,
-//    RemainingBalance = 100.00
-//};
-//CreditCard creditCard2 = new CreditCard()
-//{
-//    AccNumber = 40892345465445,
-//    RemainingBalance = 200.00
-//};
-//CreditCard creditCard3 = new CreditCard()
-//{
-//    AccNumber = 408254631236789,
-//    RemainingBalance = 300.00
-//};
+//CreditCard creditCard1 = new CreditCard();
+
+//creditCard1.AccNumber = 4088103453451234;
+//creditCard1.RemainingBalance = 100.00;
+
+
+//CreditCard creditCard2 = new CreditCard();
+
+//creditCard2.AccNumber = 40892345465445;
+//creditCard2.RemainingBalance = 200.00;
+
+
+//CreditCard creditCard3 = new CreditCard();
+
+//creditCard3.AccNumber = 408254631236789;
+//creditCard3.RemainingBalance = 300.00;
+
 
 
 //creditCard1.LoadMoney(creditCard1, 10.00);
