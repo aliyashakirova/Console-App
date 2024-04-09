@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,18 +9,30 @@ namespace Console_App
     internal class CreditCard
     {
 
-        public CreditCard(long accNumber, double remBalance)
+
+        private long _accNumber;
+        private double _remBalance;
+
+        public long AccNumber
+        { 
+            get { return _accNumber; } 
+            set { _accNumber = value; }
+        }
+
+        public double RemainingBalance
         {
-            AccNumber = accNumber;
-            RemainingBalance = remBalance;
+            get { return _remBalance; }
+            set { _remBalance = value; }
         }
 
         public CreditCard()
         {
         }
-
-        public long AccNumber { get; set; }
-        public double RemainingBalance { get; set; }
+        public CreditCard(long _accNumber, double _remBalance)
+        {
+            AccNumber = _accNumber;
+            RemainingBalance = _remBalance;
+        }
 
         public void LoadMoney(CreditCard creditCard, double money)
         {
